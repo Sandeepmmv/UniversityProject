@@ -1,0 +1,255 @@
+.pcbookarea {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+.pcbookarea .container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor);
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+    /* background-size: cover;
+    background-image: url("assets/img/slid1.webp"); */
+}
+
+.pcbookarea .container .book {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    border-radius: 0.5rem;
+    background-color: var(--bgcolor3);
+    overflow: hidden;
+}
+.pcbookarea .container .book .capclose{
+    width: 100%;
+    height: 7%;
+    display: flex;
+}
+.pcbookarea .container .book .capclose .caption {
+    text-align: center;
+    font-size: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-bottom: 1%;
+}
+.pcbookarea .container .close{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 2%;
+    right: -10px;
+    transition: width 0.2s;
+}
+.pcbookarea .container .close button{
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondc);
+    border: 1px solid var(--bgcolor);
+    border-radius: 0.2rem;
+    font-size: 1.7rem;
+}
+.pcbookarea .container .close button i{
+    color: var(--bgcolor);
+}
+.pcbookarea .container .close:hover{
+    width: 80px;
+}
+.pcbookarea .container .detail {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    z-index: 10;
+    position: relative;
+}
+
+.pcbookarea .container .detail .pc {
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid var(--secondc);
+    position: relative;
+    z-index: 11;
+}
+
+.pcbookarea .container .detail .pkg {
+    width: 40%;
+    height: 100%;
+    border-right: 1px solid var(--secondc);
+    z-index: 11;
+}
+
+.pcbookarea .container .detail .time {
+    width: 30%;
+    height: 100%;
+    padding: 2%;
+    z-index: 11;
+}
+
+.pcbookarea .container .detail .pc .pcimg {
+    width: 100%;
+    height: 70%;
+    background-image: url(" img/pc2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+}
+
+.pcbookarea .container .detail .pc .pcname {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 1.7rem;
+    opacity: 0.8;
+}
+.pcbookarea .container .detail .dec{
+    position: absolute;
+    aspect-ratio: 1/1;
+    z-index: 1;
+    border-radius: 50%;
+    pointer-events: none;
+ }
+ .pcbookarea .container .detail .dec1{
+    top: -68%;
+    left: -50%;
+    width: 90%;
+    background-color: var(--bgcolor);
+    opacity: 0.4;
+ }
+ .pcbookarea .container .detail .dec2{
+    top: -100%;
+    left: -50%;
+    width: 70%;
+    background-color: var(--secondc);
+    opacity: 0.1;
+ }
+.pcbookarea .detail .pkg .pkglist {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    /* padding: 5%; */
+    padding-inline: 5%;
+    overflow-y: auto;
+}
+.pcbookarea .container .detail input[type="radio"]{
+    display: none;
+}
+.pcbookarea .container .pkg .pkglist input[type="radio"]:checked+label .pkgname{
+    background-color: var(--secondc) !important;
+    color: var(--bgcolor);
+    font-weight: bold;
+  }
+.pcbookarea .detail .pkg .pkgt {
+    width: 100%;
+    height: 30%;
+    min-width: 400px;
+    min-height: 80px;
+    background-color: var(--bgcolor);
+    border-radius: 0.2rem;
+    margin-bottom: 2%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pcbookarea .detail .pkg .pkgt{
+    display: flex;
+    align-items: center;
+}
+.pcbookarea .detail .pkg .pkgt .pkgname{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    width: 30%;
+    height: 100%;
+    margin-right: 5%;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    background-color: var(--bgcolor3);
+
+}
+.pcbookarea .detail .pkg .details{
+    opacity: 0.6;
+}
+.pcbookarea .detail .pkg .exp {
+    text-align: left;
+    width: 100%;
+    padding-inline: 5%;
+}
+.pcbookarea .detail .pkg .date {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    padding-inline: 5%;
+    margin-bottom: 5%;
+}
+
+.pcbookarea .detail .pkg .date input {
+    width: 100%;
+    background-color: var(--bgcolor);
+    color: var(--secondc);
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    padding: 5%;
+    color-scheme: dark;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pcbookarea .detail .pkg .date input::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+    margin: 0px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+}
+
+.pcbookarea .container .detail .time .timelist{
+    width: 100%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: var(--bgcolor);
+    border-radius: 0.5rem;
+    padding: 5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pcbookarea .container .detail .time .timelist .timecard{
+    width: 100%;
+    height: 10%;
+    margin-bottom: 2%;
+    display: flex;
+    background-color: var(--bgcolor3A);
+    align-items: center;
+    padding-inline: 5%;
+    border-radius: 0.5rem;
+}
+.pcbookarea .container .timelist input[type="radio"]:checked+label{
+    background-color: var(--secondc) !important;
+    color: var(--bgcolor);
+    font-weight: bold;
+  }
+.pcbookarea .container .detail .time .paynow{
+    height: 10%;
+    width: 100%;
+    margin-top: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pcbookarea .container .detail .time .paynow button{
+    background-color: var(--secondc);
+    height: 100%;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--bgcolor3);
+    border-radius: 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.pcbookarea .exp{
+    margin-bottom: 10px;
+}

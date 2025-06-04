@@ -1,0 +1,1187 @@
+@import url('http://fonts.cdnfonts.com/css/helios-pro');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root {
+    --bgcolor: rgb(23, 26, 30);
+    --bgcolor2: rgb(51, 48, 59);
+    --bgcolor3: rgb(38, 41, 46);
+    --bgcolor3A: rgba(38, 41, 46, 0.3);
+    --secondc: rgb(254, 206, 122);
+    --secondcA: rgba(254, 206, 122, 0.9);
+    --secondcA2: rgba(254, 206, 122, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+    display: none;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(65, 61, 75);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 89, 0);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondc);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    border-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bgcolor);
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.homearea {
+    width: 100vw;
+    height: 100vh;
+    padding: 0%;
+    position: relative;
+}
+
+.homearea .upper {
+    background-color: rgba(23, 26, 30, 0.704);
+    z-index: 10;
+    height: 10%;
+    width: 100%;
+    /* border-bottom: 0.5px solid var(--secondc); */
+}
+
+.homearea nav {
+    display: flex;
+    /* padding-inline: 5%; */
+    padding-inline-end: 5%;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.homearea nav .logo {
+    position: relative;
+    font-size: 1.5rem;
+    height: 100%;
+    margin-right: auto;
+    padding-inline: 5%;
+    display: flex;
+    place-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.homearea nav .logo span {
+    font-size: 2.5rem;
+    color: var(--secondc);
+    font-family: 'Helios Pro';
+}
+
+/* .homearea .linev{
+    height: 100%;
+    padding-block: 3%;
+    font-size: 3.5rem;
+    background-color: var(--secondc);
+    border-right: 0.5px solid var(--secondc);
+ } */
+.homearea nav .navlist {
+    display: flex;
+    align-content: space-between;
+    list-style: none;
+    height: 100%;
+    align-items: center;
+    /* border-left: 0.5px solid var(--secondc); */
+    /* border-right: 0.5px solid var(--secondc); */
+    margin-right: auto;
+}
+.homearea nav .navlist label {
+    margin-right: 0px;
+    font-size: 1.2rem;
+    padding-inline: 10px;
+    height: 50%;
+    display: grid;
+    place-items: center;
+    width: 6rem;
+    border-radius: 40%;
+    padding-block: 10px;
+}
+.homearea nav .navlist input[type="radio"]{
+    display: none;
+}
+.homearea nav .navlist input[name="navLinks"]:checked + label{
+    border-bottom: 2px solid var(--secondc);
+}
+.homearea nav .navlist label:hover {
+    border-bottom: 1px solid var(--secondcA);
+}
+
+a {
+    text-decoration: none;
+}
+button{
+    cursor: pointer;
+}
+.homearea nav .navlist label a{
+    width: 110%;
+    height: 110%;
+    text-align: center;
+}
+.homearea nav .rightnav {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    margin-left: 10px;
+    width: 250px;
+    height: 100%;
+}
+
+.homearea nav .rightnav button {
+    background-color: var(--secondc);
+    width: 40%;
+    height: 27px;
+    border-radius: 0.1rem;
+    color: rgb(51, 48, 59);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-inline: 10px;
+    transition: transform, border-radius 0.4s;
+}
+
+.homearea nav .rightnav button:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 5px 1px var(--bgcolor3);
+}
+
+.homearea nav .rightnav .hline {
+    width: 2px;
+    background-color: var(--secondc);
+    height: 70%;
+    min-height: 30px;
+
+}
+
+.homearea .line {
+    width: 100vw;
+    height: 0.5px;
+    background-color: var(--secondc);
+}
+
+.homearea .linev {
+    width: 2.8px;
+    height: 100%;
+    background-color: var(--secondc);
+}
+
+.homearea .land {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.homearea .land .wall {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.homearea .land .wall .wallimg {
+    background-size: cover;
+    height: 100%;
+    background-image: url("img/14.jpg");
+    filter: blur(0px) grayscale(0%);
+    -webkit-filter: blur(0px) grayscale(0%);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    animation: wallImgAnime 3s ease-out forwards;
+    -webkit-animation: wallImgAnime 3s ease-out forwards;
+}
+
+
+@keyframes wallImgAnime {
+    0% {
+        transform: scale(110%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+.homearea .land .wall .upperlayer {
+    background-image: linear-gradient(to bottom,
+            rgba(23, 26, 30, 1),
+            rgba(23, 26, 30, 0) 40%,
+            rgba(23, 26, 30, 0.5) 50%,
+            rgba(23, 26, 30, 0.7) 60%,
+            rgba(23, 26, 30, 0.9) 80%,
+            rgba(23, 26, 30, 1) 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.homearea .lineart {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 10%;
+    height: 80%;
+    display: grid;
+    place-items: center;
+    z-index: 4;
+    animation: wallImgAnime 3s ease-out;
+
+}
+
+.homearea .lineart .line1 {
+    width: 0.5px;
+    height: 100%;
+    background-color: var(--secondc);
+    position: relative;
+}
+
+.homearea .lineart .line1::after {
+    width: 5px;
+    height: 10%;
+    position: absolute;
+    top: 25%;
+    left: -3px;
+    offset-position: 20px;
+    background-color: var(--secondc);
+    padding: 1px;
+    content: "";
+    color: var(--secondc);
+}
+
+.homearea .land .wall .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+}
+
+/* .homearea .land .wall .container .line{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 5px;
+} */
+.homearea .land .wall .subcontainer {
+    width: 65%;
+    height: 100%;
+    padding: 10%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    animation: targetAnime 3s ease-out;
+}
+
+.homearea .land .wall .subcontainer .text .caption {
+    font-size: 8rem;
+    letter-spacing: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.homearea .land .wall .subcontainer .text .para {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    text-shadow: 0px 0px 20px rgb(0, 0, 0);
+}
+
+.homearea .land .wall .subcontainer .text .buttons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 40px;
+}
+
+.homearea .land .wall .subcontainer .text .buttons div {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--bgcolor3);
+    margin-right: 10px;
+    display: grid;
+    place-items: center
+}
+
+.homearea .land .wall .subcontainer .text .buttons div:hover {
+    transform: scale(105%);
+}
+
+.homearea .land .wall .subcontainer .text .buttons .contact {
+    width: 7rem;
+    margin-left: 20px;
+}
+
+.homearea .land .wall .subcontainer .text .buttons .contact:hover {
+    transform: scale(105%);
+}
+
+.homearea .land .wall .subcontainer2 {
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+    margin-left: 0%;
+    overflow: hidden;
+    animation: targetAnime 3s ease-out;
+    /* cursor: none; */
+}
+
+.homearea .land .wall .subcontainer2 .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.homearea .land .wall .subcontainer2 .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.homearea .land .wall .subcontainer2 .target {
+    width: 45%;
+    aspect-ratio: 1/1;
+    position: relative;
+    background-image: url("img/svg/target.svg");
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    top: calc(15vw - (45% / 2));
+    left: calc(15vw - (45% / 2));
+}
+
+.homearea .land .wall .subcontainer2 .target .circle {
+    width: 82%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    z-index: -1;
+    /* background-image: url("img/6.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 30vw 30vw;
+    /* background-position: calc(-(15vw - 82% / 2))px calc(-(15vw - 82% / 2))px; */
+}
+
+.homearea .land .wall .subcontainer2 .box {
+    position: absolute;
+    width: 25%;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+    transition: transform 1s ease-in;
+}
+
+.homearea .land .wall .subcontainer2 .box1 {
+    top: 0;
+    left: 0;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.homearea .land .wall .subcontainer2 .box2 {
+    top: 0;
+    right: 0;
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+}
+
+.homearea .land .wall .subcontainer2 .box3 {
+    bottom: 0;
+    left: 0;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+}
+
+.homearea .land .wall .subcontainer2 .box4 {
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+}
+
+.homearea nav .rightnav .bullet-fire {
+    animation: bulletAnime 2s ease-out;
+}
+
+.shake {
+    animation: shakeAnime 0.5s ease 1s;
+}
+
+.shake2 {
+    animation: shakeAnime 0.5s ease;
+}
+
+@keyframes targetAnime {
+    0% {
+        transform: scale(110%);
+    }
+
+    100% {
+        transform: scale(100%);
+    }
+}
+
+@keyframes bulletAnime {
+    20% {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: scale(50%) rotate(0deg);
+        color: transparent;
+    }
+
+    50% {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: scale(50%) rotate(0deg);
+        color: transparent;
+    }
+
+    60% {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: translatex(-70vw) rotate(0deg) scale(50%);
+        color: transparent;
+    }
+
+    100% {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+        transform: translatex(-100vw) rotate(0deg) scale(50%);
+        color: transparent;
+    }
+}
+
+@keyframes shakeAnime {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-0.2deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(0.2deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(0.2deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-0.2deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-0.2deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(0.2deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-0.2deg);
+    }
+}
+
+.homearea .service {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    color: black;
+    padding-top: 3%;
+    padding-inline: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.homearea .service .caption {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.homearea .service .servicelist {
+    height: 65%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.homearea .service .card {
+    width: 30%;
+    height: 80%;
+    min-width: 300px;
+    min-height: 350px;
+    font-size: 1.2rem;
+    background-color: var(--bgcolor3);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: transform 1s ease;
+}
+
+.homearea .service .card:hover {
+    transform: scale(103%);
+}
+
+.homearea .service .card i {
+    width: 100%;
+    height: 20%;
+    margin-top: 8%;
+    margin-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+}
+
+.homearea .service .card .fa-headset {
+    color: skyblue;
+}
+
+.homearea .service .card .fa-credit-card {
+    color: greenyellow;
+}
+
+.homearea .service .card .fa-burger {
+    color: var(--secondc);
+}
+
+.homearea .service .card .title {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 1s ease;
+}
+
+.homearea .service .card .para {
+    height: 50%;
+    padding-top: 7%;
+    padding-inline: 10%;
+    overflow: hidden;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.homearea .service .card:hover>.para {
+    opacity: 1;
+}
+
+.homearea .service .card .button {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.homearea .service .card .button button {
+    width: 40%;
+    height: 80%;
+    background-color: var(--secondc);
+    color: var(--bgcolor);
+    font-size: 1.1rem;
+    border-radius: 0.2rem;
+}
+
+
+.homearea .packages{
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--bgcolor); */
+    position: relative;
+    color: black;
+    padding-top: 3%;
+    padding-inline: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.homearea .packages .caption {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    height: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+.homearea .packages .packageslist{
+    height: 83%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.homearea .packages .packageslist .packcard{
+    width: 25%;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    transition: transform 1s ease;
+    position: relative;
+}
+.homearea .packages .packageslist .packcard:hover {
+    transform: scale(103%);
+}
+.homearea .packages .cardbody{
+   position: relative;
+   width: 100%;
+   min-width: 260px;
+   min-height: 400px;
+   background: var(--bgcolor3);
+   border-radius: 0 0 0.5rem 0.5rem;
+   box-shadow: 0 5px 25px rgb(0 0 0/ 20%); 
+   margin-top: 60px;
+}
+
+.homearea .packages .cardbody .topshape{
+    clip-path: polygon(0 0, 100% 0%, 100% 50%, 50% 75%, 0 50%);
+    height: 200px;    
+}
+.homearea .packages .card1 .topshape{
+    background: skyblue;
+}
+.homearea .packages .card2 .topshape{
+    background: greenyellow;
+}
+.homearea .packages .card3 .topshape{
+    background: var(--secondc);
+}
+.homearea .packages .cardbody .topshape:before{
+    content: ' ';
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0%, 100% 0%, 0 0%);
+    width: 100%;
+    height: 140px;
+    background: var(--bgcolor3);
+}
+.homearea .packages .pricing{
+    z-index: 999;
+    text-align: center;
+    position: absolute;
+    width: 100%;    
+}
+
+.homearea .packages .price{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.homearea .packages .price span{
+    font-size: 5em;
+    line-height: 100px;
+}
+
+.homearea .packages .price sup{
+    font-size: 1.5em;
+    transform: translateY(-15px);
+}
+
+.homearea .packages .pricing p{
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--bgcolor3);
+}
+
+.homearea .packages .pricing .type{
+    text-transform: uppercase;
+    font-size: 2em;
+    color: var(--bgcolor3);
+}
+
+.homearea .packages .cardbody .cardcontent{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    transform: translateY(-30px);
+}
+
+.homearea .packages .cardbody .cardcontent ul{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.homearea .packages .cardbody .cardcontent ul li{
+    list-style: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    line-height: 35px;
+    white-space: nowrap;
+    opacity: 0.6;
+}
+.homearea .packages .packageslist .packcard:hover> .cardbody .cardcontent ul li {
+    opacity: 1;
+}
+.homearea .contacts {
+    height: 100vh;
+    width: 100%;
+    /* background-color: var(--bgcolor); */
+    position: relative;
+    padding-top: 3%;
+    padding-inline: 10%;
+}
+
+.homearea .contacts .caption {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    height: 10%;
+}
+
+.homearea .contacts .conoptions {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.homearea .contacts .conoptions .concard {
+    height: 100%;
+    aspect-ratio: 2/1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homearea .contacts .conoptions .conop {
+    height: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--secondc);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    font-size: 1.6rem;
+    text-align: center;
+    box-shadow: var(--secondcA2) 0px 0px 90px;
+}
+
+.homearea .contacts .conoptions .text {
+    margin-top: 5%;
+    width: 60%;
+    text-align: center;
+}
+
+.homearea .contacts .conoptions .conop i {
+    color: var(--bgcolor);
+}
+.homearea .contacts .condetails {
+    width: 100%;
+    height: 60%;
+    padding-inline: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.homearea .contacts .condetails .map{
+    background-color: var(--bgcolor2);
+    width: 58%;
+    height: 100%;
+}
+.homearea .contacts .condetails .conform {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.homearea .contacts input[type="text"] {
+    margin-top: 1%;
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--bgcolor3);
+    border-radius: 0.1rem;
+    padding-inline: 3%;
+    margin-bottom: 1%;
+    color: white;
+}
+.homearea .contacts .conform .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.homearea .contacts .conform .row input[type="text"]{
+    width: 48%;
+}
+.homearea .contacts textarea {
+    margin-top: 1%;
+    width: 100%;
+    height: 12rem;
+    background-color: var(--bgcolor3);
+    color: white;
+    padding: 1%;
+    padding-inline: 3%;
+}
+.homearea .contacts button {
+    background-color: var(--secondc);
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.1rem;
+    color: rgb(51, 48, 59);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-inline: 10px;
+    transition: transform, border-radius 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homearea .contacts button i{
+    color: var(--bgcolor3);
+    height: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+}
+.homearea .contacts button:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 5px 1px var(--bgcolor3);
+}
+.homearea .contacts input:focus {
+    outline: none;
+}
+
+
+
+.homearea .dashboard {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+}
+
+.homearea .dashboard .dashcontainer {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+}
+
+.homearea .dashboard .dashcard {
+    width: 20%;
+    height: 100%;
+    padding: 1%;
+    background-color: var(--bgcolor3A);
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.homearea .dashboard .dashcard .icon {
+    width: 100%;
+    height: 40%;
+    display: grid;
+    place-content: center;
+}
+
+.homearea .dashboard .dashcard .icon i {
+    font-size: 2.5rem;
+    color: var(--secondc);
+}
+
+.homearea .dashboard .dashcard .count {
+    width: 100%;
+    height: 45%;
+    display: grid;
+    place-content: center;
+    font-size: 3.5rem;
+    opacity: 0.8;
+}
+
+.homearea .dashboard .dashcard .desc {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    opacity: 0.7;
+}
+
+
+/* ABOUT US SECTION */
+.homearea .aboutus .card .title {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 1s ease;
+}
+.homearea .aboutus .card:hover {
+    transform: scale(103%);
+}
+.homearea .aboutus .card .para {
+    height: 50%;
+    padding-top: 7%;
+    padding-inline: 10%;
+    overflow: hidden;
+    font-size: 1.2rem;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 1s ease;
+}
+
+.homearea .aboutus .card:hover>.para {
+    opacity: 1;
+}
+
+.homearea .aboutus .card {
+    width: 100%;
+    height: 100%;
+    /* min-width: 300px;
+    min-height: 350px; */
+    font-size: 1.2rem;
+    background-color: var(--bgcolor3);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: transform 1s ease;
+}
+.homearea .aboutus {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bgcolor);
+    position: relative;
+    padding-top: 3%;
+    padding-inline: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container */
+.homearea .aboutus .aucontainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* Caption */
+.homearea .aboutus .caption {
+    text-align: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Subcontainer */
+.homearea .aboutus .ausubcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    gap: 20px;
+}
+
+/* Left Side: Slider */
+.homearea .aboutus .aucon {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 17%;
+}
+
+/* Right Side: About Text */
+.homearea .aboutus .aucon2 {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+/* IMAGE SLIDER */
+.homearea .aboutus .aucon .slids {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SLIDE IMAGES */
+.homearea .aboutus .aucon .slid {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    filter: grayscale(30%);
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.homearea .aboutus .aucon .slid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SHOW FIRST SLIDE */
+.homearea .aboutus .aucon .slid.active {
+    opacity: 1;
+}
+
+/* DOTS FOR SLIDER NAVIGATION */
+.homearea .aboutus .aucon .dots {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.homearea .aboutus .aucon .dot {
+    width: 12px;
+    height: 12px;
+    background-color: var(--bgcolor2);
+    border: 1px solid var(--secondcA);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.homearea .aboutus .aucon .dot.active {
+    background-color: var(--secondc);
+}
+
+/* 🔹 RESPONSIVE DESIGN */
+@media only screen and (max-width: 768px) {
+    .homearea .aboutus {
+        height: auto;
+        padding-inline: 5%;
+    }
+
+    .homearea .aboutus .ausubcontainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homearea .aboutus .aucon,
+    .homearea .aboutus .aucon2 {
+        width: 100%;
+    }
+
+    .homearea .aboutus .aucon .slids {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.homearea .footer{
+    width: 100%;
+    margin-top: 100px;
+    padding-block: 20px;
+    background-image: url("img/13.jpg");
+    background-size: cover;
+    position: relative;
+    /* background-color: var(--bgcolor3);
+    border-radius: 50px 50px 0px 0px;
+    border-top: 2px solid var(--secondc);
+    box-shadow: 0px 0px 10px 10px var(--secondcA2); */
+}
+.homearea .footer svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.homearea .footer .row{
+    width: 100%;
+    padding-top: 150px;
+    padding-inline: 150px;
+    display: flex;
+    justify-content: space-between
+}
+.homearea .footer .copyright{
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+.homearea .footer .row .details{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.479);
+}
+.homearea .footer .row .details a{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.479);
+}
+.homearea .footer .row .details .title{
+    font-size: 1.1rem;
+    opacity: 1;
+    margin-bottom: 15px;
+}
+
+.homearea .backdec{
+    opacity: 0.2;
+    position: absolute;
+    top : 200%;
+    z-index: 0;
+
+}

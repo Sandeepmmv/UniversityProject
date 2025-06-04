@@ -1,0 +1,45 @@
+:root {
+    --bgcolor: rgb(23, 26, 30);
+    --bgcolor2: rgb(51, 48, 59);
+    --bgcolor3: rgb(38, 41, 46);
+    --bgcolor3A: rgba(38, 41, 46, 0.3);
+    --secondc: rgb(254, 206, 122);
+    --secondcA: rgba(254, 206, 122, 0.9);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    border-style: none;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.loadercontainer{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 20;
+    display: none;
+}
+.loadercontainer .innercontainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+.loadercontainer .innercontainer .loader{
+    border: 8px solid var(--bgcolor);
+    border-color: var(--secondc) transparent var(--secondc) transparent;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }

@@ -1,0 +1,222 @@
+:root{
+   --bgcolor: rgb(23, 26, 30);
+   --bgcolor2: rgb(51, 48, 59);
+   --bgcolor3: rgb(38, 41, 46);
+   --bgcolor3A: rgba(38, 41, 46, 0.3);
+   --secondc: rgb(254, 206, 122);
+   --secondcA: rgba(254, 206, 122, 0.9);
+ }
+ ::-webkit-scrollbar{
+     width: 0.6rem;
+ }
+ ::-webkit-scrollbar-track{
+     background: rgb(65, 61, 75);
+ }
+ ::-webkit-scrollbar-thumb{
+     background: rgba(90, 90, 89, 0);
+     border-radius: 1rem;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+     background: var(--secondc);
+ }
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     color: white;
+     border-style: none;
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ body{
+   
+     background-color: var(--bgcolor);
+     padding-bottom: 50px;
+     overflow: hidden;
+ }
+ .loginarea{
+     width: 100vw;
+     height: 100vh;
+     padding: 0%;
+     display: grid;
+     place-items: center;
+ }
+ .loginarea .container{
+    width: 50%;
+    height: 65%;
+    min-width: 330px;
+    min-height: 400px;
+    position: relative;
+ }
+ .loginarea .container .log{
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor);
+    border-radius: 0.5rem;
+    padding: 30px;
+    border: 1px solid var(--secondc);
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 22px 70px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ /* .loginarea .container .abso{
+    transform: scale(10%);
+    animation: absoAnime 2s ease-in;
+ } */
+ /* .loginarea .container::after{
+    content: "";
+    width: 8px;
+    height: 70px;
+    z-index: 1;
+    position: absolute;
+    background-color: var(--secondc);
+    top: 20%;
+    left: -1.1%;
+    animation: moveupdown 5s ease infinite alternate;
+ }*/
+ .loginarea .container .caption{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3%;
+ }
+ .loginarea .container .dec{
+    position: absolute;
+    height: 130%;
+    width: 130%;
+    aspect-ratio: 1/1.2;
+    background-color: var(--secondc);
+    bottom: -15%;
+    left: -15%;
+    z-index: -1;
+    border-radius: 50%;
+ }
+ .loginarea .container .dec1{
+    animation: rotdec 30s ease infinite;
+    animation-timing-function: linear;
+    opacity: 0.6;
+ }
+ .loginarea .container .dec2{
+    animation: rotdec 20s ease infinite 2s;
+    animation-timing-function: linear;
+    opacity: 0.5;
+ }
+ .loginarea .container .dec3{
+    animation: rotdec 15s ease infinite 3s;
+    animation-timing-function: linear;
+    opacity: 0.2;
+ }
+ /* .loginarea .container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ } */
+ .loginarea .container .row1{
+   display: flex;
+   width: 100%;
+   height: 20%;
+ }
+ .loginarea .container .row1 .col1{
+   display: flex;
+   width: 50%;
+   height: 100%;
+   flex-direction: column;
+ }
+ .loginarea .container .text{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    height: 20%;
+    opacity: 0.5;
+ }
+ .loginarea .container input[type="text"]{
+   width: 100%;
+   height: 10%;
+   background-color: var(--bgcolor3);
+   border-radius: 0.3rem;
+   padding-inline: 5%;
+}
+.loginarea .container input:focus{
+   outline: none;
+}
+.loginarea .container .row1 input[type="text"]{
+   width: 90%;
+   height: 40%;
+   margin-top: 7px;
+ }
+ .loginarea .container input[type="submit"]{
+    margin-top: 1%;
+    height: 40px;
+    width: 60%;
+    cursor: pointer;
+    background-color: var(--secondc);
+    border-radius: 0.1rem;
+    color: black;
+    font-size: 1.2rem;
+ }
+
+ .loginarea .container .error{
+   color:red;
+   font-size:0.7rem;
+   height: 5%;
+   width: 90%;
+   padding-top: 3px;
+   text-align: right;
+}
+
+ /* @keyframes moveupdown {
+    0%{top:70%}
+    100%{top:10%}
+ } */
+ @keyframes rotdec {
+    form{transform:rotate(0deg)}
+    to{ transform: rotate(360deg)}
+ }
+ /* @keyframes absoAnime {
+    0%{transform: rotate(0deg) scale(100%);}
+    100%{transform: rotate(500deg) scale(0%);}
+ } */
+
+  .loginarea .container .cvdec{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: var(--bgcolor3A);
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+.loginarea .container .cvdec1{
+   left: 0;
+   top: 0;
+   clip-path: polygon(0 0, 10% 5%, 10% 90%, 0% 100%);
+   background-image: linear-gradient(var(--bgcolor3), var(--bgcolor3A));
+}
+ .loginarea .container .cvdec2{
+   right: 0;
+   top: 0;
+   clip-path: polygon(100% 0, 90% 5%, 90% 90%, 100% 100%);
+   background-image: linear-gradient(var(--bgcolor3), var(--bgcolor3A));
+}
+ .loginarea .container .chdec{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   background-color: var(--bgcolor3A);
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+}
+ .loginarea .container .chdec1{
+   left: 0;
+   top: 0;
+   clip-path: polygon(100% 0, 0 0, 10% 5%, 90% 5%);
+   background-color: var(--secondcA);
+}
+ .loginarea .container .chdec2{
+   left: 0;
+   bottom: 0;
+   clip-path: polygon(90% 90%, 10% 90%, 0 100%, 100% 100%);
+   background-color: var(--secondcA2);
+}
+
+a{
+   text-decoration: none ;
+}
